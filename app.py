@@ -54,3 +54,9 @@ def delete_cupcake(id):
     db.session.delete(cupcake)
     db.session.commit()
     return jsonify(message="Deleted")
+
+
+@app.route('/', methods=["GET"])
+def display_cupcakes():
+    cupcakes = Cupcake.query.all()
+    return render_template('index.html', cupcakes=cupcakes)
