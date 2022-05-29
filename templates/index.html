@@ -9,7 +9,7 @@
     <title>Cupcakes</title>
 </head>
 <body>
-    <h1 class="heading 1">Cupcakes</h1>
+    <!-- <h1 class="heading 1">Cupcakes</h1>
     <div class="table">
     <table>
         <thead>
@@ -20,27 +20,34 @@
         </thead>
         {% for cupcake in cupcakes %}
         <tr>
-        <td>{{cupcake.flavor}}</td>
-        <td>{{cupcake.size}}</td>
-        <td>{{cupcake.rating}}</td>
-        <td><img src="{{cupcake.image}}" alt=" " width="100" height="100"></td>
+        <td id="flavor">{{cupcake.flavor}}</td>
+        <td id="size">{{cupcake.size}}</td>
+        <td id="rating">{{cupcake.rating}}</td>
+        <td id="image"><img src="{{cupcake.image}}" alt="(No Image Here)" width="100" height="100"></td>
         </tr>
         {% endfor %}
     </table>
+    </div> -->
+
+    <div class="container">
+        <h1>Cupcakes!</h1>
+        <ul id="cupcakes-list">
+        </ul>
+
     </div>
 
     <div>
         <h2>Add a Cupcake</h2>
-        <form action="" method="post">
-            <input type="text" id="flavor" name="flavor">
+        <form action="" method="post" id="new-cupcake">
+            <input type="text" id="form-flavor" name="flavor">
             <label for="flavor">Flavor</label><br>
-            <input type="text" id="size" name="size">
+            <input type="text" id="form-size" name="size">
             <label for="size">Size</label><br>
-            <input type="text" id="rating" name="rating">
+            <input type="text" id="form-rating" name="rating">
             <label for="rating">Cupcake Rating</label><br>
-            <input type="text" id="image">
+            <input type="text" id="form-image">
             <label for="image">Enter Cupcake Image</label><br>
-            <button id="new-cupcake">Add Cupcake!!</button>
+            <button >Add Cupcake!!</button>
         </form>
     </div>
 

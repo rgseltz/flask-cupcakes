@@ -58,5 +58,5 @@ def delete_cupcake(id):
 
 @app.route('/', methods=["GET"])
 def display_cupcakes():
-    cupcakes = Cupcake.query.all()
-    return render_template('index.html', cupcakes=cupcakes)
+    # cupcakes = Cupcake.query.all()
+    return render_template('index.html')
